@@ -25,11 +25,12 @@ SECRET_KEY = ''
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# domain names that will be used for this application when deployed
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Any app that is created needs to be added
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# Components responsobile for various tasks, i.e. auth;
+# Order of middleware is very important, i.e. auth is dependent on session
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
